@@ -12,6 +12,7 @@ namespace TrainFormuls.DataAccess.Interfaces
     {
         DbSet<QuantityRto> Quantities { get; set; }
         DbSet<FormulaRto> Formulas { get; set; }
+        DbSet<SectionRto> Sections { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }

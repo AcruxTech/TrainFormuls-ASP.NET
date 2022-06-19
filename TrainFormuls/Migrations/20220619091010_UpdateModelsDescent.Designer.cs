@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TrainFormuls.DataAccess.Contexts;
 
 namespace TrainFormuls.Migrations
 {
     [DbContext(typeof(TrainFormulsContext))]
-    partial class TrainFormulsContextModelSnapshot : ModelSnapshot
+    [Migration("20220619091010_UpdateModelsDescent")]
+    partial class UpdateModelsDescent
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

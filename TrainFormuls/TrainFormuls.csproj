@@ -7,9 +7,7 @@
   <ItemGroup>
     <Folder Include="Api\Controllers\" />
     <Folder Include="Api\Models\" />
-    <Folder Include="BusinessLogic\Models\" />
     <Folder Include="BusinessLogic\Services\" />
-    <Folder Include="BusinessLogic\Interfaces\" />
   </ItemGroup>
 
   <ItemGroup>

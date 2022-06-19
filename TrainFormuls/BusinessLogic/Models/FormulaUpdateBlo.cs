@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using TrainFormuls.Shared.Models;
 
-namespace TrainFormuls.DataAccess.Models
+namespace TrainFormuls.BusinessLogic.Models
 {
-    public class QuantityRto : QuantityBase
+    public class FormulaUpdateBlo : QuantityUpdateBase
     {
-        public int Id { get; set; }
+        
     }
 }

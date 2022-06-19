@@ -13,5 +13,6 @@ namespace TrainFormuls.DataAccess.Contexts
         public TrainFormulsContext(DbContextOptions<TrainFormulsContext> options) : base(options) { }
         public DbSet<QuantityRto> Quantities { get; set; }
         public DbSet<FormulaRto> Formulas { get; set; }
+        public DbSet<SectionRto> Sections { get; set; }
     }
 }
