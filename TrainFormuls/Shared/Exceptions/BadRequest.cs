@@ -9,6 +9,7 @@ namespace TrainFormuls.Shared.Exceptions
     {
         public BadRequest(string message) : base(message)
         {
+
         }
     }
 }

@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace TrainFormuls.Shared.Exceptions
 {
-    public class Unauthorized : Exception
+    public class UnknownError : Exception
     {
-        public Unauthorized(string message) : base(message)
+        public UnknownError() : base("Unexpected server error! Please, notify the administrator")
         {
 
         }

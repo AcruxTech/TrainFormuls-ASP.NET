@@ -9,6 +9,7 @@ namespace TrainFormuls.Shared.Exceptions
     {
         public NotFound(string message) : base(message)
         {
+
         }
     }
 }
