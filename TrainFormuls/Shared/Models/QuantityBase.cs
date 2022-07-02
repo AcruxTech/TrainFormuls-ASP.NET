@@ -11,6 +11,6 @@ namespace TrainFormuls.Shared.Models
         public string Symbol { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public SectionRto Section { get; set; }
+        public string SectionTitle { get; set; }
     }
 }

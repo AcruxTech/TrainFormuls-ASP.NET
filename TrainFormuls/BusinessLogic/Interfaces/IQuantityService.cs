@@ -8,9 +8,9 @@ namespace TrainFormuls.BusinessLogic.Interfaces
 {
     public interface IQuantityService
     {
-        Task<bool> Add(QuantityInformationBlo formulaInformationBlo);
+        Task<bool> Add(QuantityInformationBlo quantityInformationBlo);
+        Task<QuantityInformationBlo> Get();
         Task<QuantityInformationBlo> Get(string title);
-        Task<QuantityInformationBlo> GetRandom();
         Task<QuantityInformationBlo> Update(string title, QuantityUpdateBlo quantityUpdateBlo);
         Task<bool> Delete(string title);
     }
