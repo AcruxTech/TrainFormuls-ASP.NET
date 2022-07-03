@@ -54,14 +54,28 @@ namespace TrainFormuls.BusinessLogic.Services
             return true;
         }
 
-        public Task<QuantityInformationBlo> Get()
+        public async Task<QuantityInformationBlo> Get()
         {
-            throw new NotImplementedException();
+            int count = await _context.Quantities.CountAsync();
+
+            if (count == 0)
+                throw new NotFound("No quanities found");
+
+            Random random = new Random();
+
+            QuantityRto q = await _context.Quantities.FirstOrDefaultAsync(q => q.Id == random.Next(1, count));
+
+            return _mapper.Map<QuantityInformationBlo>(q);
         }
 
-        public Task<QuantityInformationBlo> Get(string title)
+        public async Task<QuantityInformationBlo> Get(string title)
         {
-            throw new NotImplementedException();
+            QuantityRto q = await _context.Quantities.FirstOrDefaultAsync(q => q.Title == title);
+
+            if (q == null)
+                throw new NotFound($"Quantity with title {title} not found");
+
+            return _mapper.Map<QuantityInformationBlo>(q);
         }
 
         public Task<QuantityInformationBlo> Update(string title, QuantityUpdateBlo quantityUpdateBlo)
